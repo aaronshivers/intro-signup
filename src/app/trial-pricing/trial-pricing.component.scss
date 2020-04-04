@@ -1,0 +1,20 @@
+@import "src/styles/variables";
+
+.pricing {
+  background-color: $blue;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 .5rem darken($red, 5%);
+}
+
+.pricing__body {
+  font-weight: $font-weight-small;
+  line-height: 1.7rem;
+  width: 60%;
+}
+
+.bold {
+  font-weight: $font-weight-extra-large;
+}

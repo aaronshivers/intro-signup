@@ -1,0 +1,10 @@
+@mixin flexbox() {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+@mixin flex($width) {
+  width: $width;
+  margin: auto;
+}

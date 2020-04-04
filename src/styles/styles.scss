@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~normalize.css/normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "variables";
+@import "mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight-small;
+  background-image: url("src/assets/images/bg-intro-mobile.png");
+  background-color: $red;
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-image: url("src/assets/images/bg-intro-desktop.png");
+  }
+}
+
+.flex-wrapper {
+  @include flexbox();
+}
+
+.flex-item {
+  @include flex(720px);
+}
