@@ -16,9 +16,10 @@ body {
   font-weight: $font-weight-small;
   background-image: url("src/assets/images/bg-intro-mobile.png");
   background-color: $red;
+  height: 100vh;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1100px) {
   body {
     background-image: url("src/assets/images/bg-intro-desktop.png");
   }
@@ -29,5 +30,5 @@ body {
 }
 
 .flex-item {
-  @include flex(720px);
+  @include flex(550px);
 }

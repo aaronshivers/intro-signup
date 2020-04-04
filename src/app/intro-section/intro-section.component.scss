@@ -12,3 +12,17 @@
   line-height: 1.65rem;
   margin-bottom: 4rem;
 }
+
+@media (min-width: 1100px) {
+  .intro {
+    text-align: left;
+  }
+  .intro__header {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .intro__body {
+    margin-bottom: auto;
+  }
+}
