@@ -1,26 +1,55 @@
 <div class="form__wrapper">
-  <form class="form">
+  <form
+    #f="ngForm"
+    (ngSubmit)="onSubmit(f)"
+    class="form"
+  >
     <input
-      class="form__input"
+      #firstName="ngModel"
+      [class.invalid]="firstName.touched && firstName.invalid"
+      class="form__input invalid"
+      name="firstName"
+      ngModel
       placeholder="First Name"
+      required
       type="text"
     >
     <input
+      #lastName="ngModel"
+      [class.invalid]="lastName.touched && lastName.invalid"
       class="form__input"
+      name="lastName"
+      ngModel
       placeholder="Last Name"
+      required
       type="text"
     >
     <input
+      #email="ngModel"
+      [class.invalid]="email.touched && email.invalid"
       class="form__input"
+      email
+      name="email"
+      ngModel
       placeholder="Email Address"
+      required
       type="email"
     >
     <input
+      #password="ngModel"
+      [class.invalid]="password.touched && password.invalid"
       class="form__input"
+      name="password"
+      ngModel
       placeholder="Password"
+      required
       type="password"
     >
-    <button class="form__button">Claim your free trial</button>
+    <button
+      [class.form__button--disabled]="f.touched && f.invalid"
+      class="form__button"
+    >Claim your free trial
+    </button>
   </form>
 
   <p class="form__terms">

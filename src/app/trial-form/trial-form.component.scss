@@ -29,7 +29,7 @@
   font-weight: $font-weight-large;
 }
 
-.form__input:invalid {
+.invalid {
   background-image: url("src/assets/images/icon-error.svg");
   background-repeat: no-repeat;
   background-position: right 1.5rem center;
@@ -46,6 +46,11 @@
   padding: 1.2rem;
   margin: .5rem 0;
   box-shadow: 0 .25rem darken($green, 10%);
+}
+
+.form__button--disabled {
+  background-color: lighten($green, 20%);
+  box-shadow: 0 .25rem lighten($green, 10%);
 }
 
 .form__terms {
