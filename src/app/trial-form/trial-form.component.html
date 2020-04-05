@@ -14,6 +14,12 @@
       required
       type="text"
     >
+    <p
+      *ngIf="firstName.touched && firstName.invalid"
+      class="form__hint"
+    >
+      First Name cannot be empty
+    </p>
     <input
       #lastName="ngModel"
       [class.invalid]="lastName.touched && lastName.invalid"
@@ -24,6 +30,12 @@
       required
       type="text"
     >
+    <p
+      *ngIf="lastName.touched && lastName.invalid"
+      class="form__hint"
+    >
+      Last Name cannot be empty
+    </p>
     <input
       #email="ngModel"
       [class.invalid]="email.touched && email.invalid"
@@ -35,6 +47,12 @@
       required
       type="email"
     >
+    <p
+      *ngIf="email.touched && email.invalid"
+      class="form__hint"
+    >
+      Looks like this is not an email
+    </p>
     <input
       #password="ngModel"
       [class.invalid]="password.touched && password.invalid"
@@ -45,6 +63,12 @@
       required
       type="password"
     >
+    <p
+      *ngIf="password.touched && password.invalid"
+      class="form__hint"
+    >
+      Password cannot be empty
+    </p>
     <button
       [class.form__button--disabled]="f.touched && f.invalid"
       class="form__button"
